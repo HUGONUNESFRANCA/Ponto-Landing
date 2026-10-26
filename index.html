@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ponto: coador de café que dobra e cabe no bolso</title>
+<meta name="description" content="Ponto é um coador de café de viagem em aço e silicone. Dobra para 2 cm e serve de 250 a 600 ml.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E8EEE6; --paper:#F7F9F5; --ink:#1B3029; --mute:#51645B; --line:#C5D1C6;
+  --accent:#F2B134; --on-accent:#1B3029; --prod:#1F4A3D;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#121C18; --paper:#1A2822; --ink:#E7EFE9; --mute:#9DB0A5; --line:#2D4037; color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#121C18; --paper:#1A2822; --ink:#E7EFE9; --mute:#9DB0A5; --line:#2D4037; color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:84px;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.05;margin:0;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:800 1.5rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+.top span{color:var(--mute);font-size:.9rem}
+
+.hero{display:grid;gap:28px;padding:16px 0 56px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,9vw,5rem);font-weight:800;max-width:11ch}
+.hero p.lead{font-size:1.2rem;color:var(--mute);max-width:42ch;margin-top:16px}
+.stage{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:20px;display:grid;place-items:center;aspect-ratio:1/1;max-width:460px;width:100%;justify-self:center}
+.stage svg{width:100%;height:auto}
+.swatches{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.swatches button{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);padding:8px 14px 8px 8px;border-radius:99px;font:500 .95rem "DM Sans",sans-serif;cursor:pointer}
+.swatches button i{width:22px;height:22px;border-radius:50%;display:block}
+.swatches button[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.buy{display:flex;align-items:center;gap:18px;margin-top:22px;flex-wrap:wrap}
+.price{font:800 2rem "Bricolage Grotesque",sans-serif}
+.price small{display:block;font:400 .85rem "DM Sans",sans-serif;color:var(--mute)}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);font:700 1.05rem "DM Sans",sans-serif;padding:16px 28px;border-radius:14px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;max-width:18ch}
+.grid3{display:grid;gap:28px;margin-top:32px}
+.grid3 h3{font-size:1.3rem;font-weight:600}
+.grid3 p{color:var(--mute);margin-top:8px;max-width:38ch}
+.steps{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:18px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:700 1.1rem "Bricolage Grotesque",sans-serif}
+.steps b{display:block;font-weight:700}
+.steps span{color:var(--mute)}
+.specs{margin-top:28px;border:1px solid var(--line);border-radius:20px;background:var(--paper);overflow-x:auto}
+.specs table{border-collapse:collapse;width:100%;min-width:420px}
+.specs th,.specs td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line)}
+.specs tr:last-child th,.specs tr:last-child td{border-bottom:0}
+.specs th{font-weight:500;color:var(--mute);width:42%}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+details summary{cursor:pointer;font-weight:700;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";float:right;font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mute);margin-top:10px;max-width:60ch}
+.guar{background:var(--ink);color:var(--bg);border-radius:28px;padding:36px 26px;margin:0 0 56px}
+.guar h2{max-width:16ch}
+.guar p{margin-top:14px;opacity:.85;max-width:46ch}
+footer{padding:24px 0 36px;color:var(--mute);font-size:.88rem;border-top:1px solid var(--line)}
+
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:5}
+.bar b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem}
+.bar .btn{padding:12px 22px}
+.toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:6;max-width:90vw;text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (min-width:820px){
+  .hero{grid-template-columns:1.1fr .9fr;gap:56px;padding-bottom:80px}
+  .grid3{grid-template-columns:repeat(3,1fr);gap:40px}
+  section{padding:80px 0}
+  body{padding-bottom:0}
+  .bar{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="logo" href="#">Ponto</a><span>Frete grátis acima de R$ 250</span></header>
+
+  <main>
+  <div class="hero">
+    <div>
+      <h1>Café coado de verdade, em qualquer lugar.</h1>
+      <p class="lead">Um coador de aço e silicone que dobra para 2 cm. Cabe no bolso do casaco e serve de 250 a 600 ml.</p>
+      <div class="swatches" role="group" aria-label="Escolha a cor">
+        <button type="button" data-c="#1F4A3D" data-n="Pinho" aria-pressed="true"><i style="background:#1F4A3D"></i>Pinho</button>
+        <button type="button" data-c="#F2B134" data-n="Açafrão" aria-pressed="false"><i style="background:#F2B134"></i>Açafrão</button>
+        <button type="button" data-c="#9FB4C7" data-n="Névoa" aria-pressed="false"><i style="background:#9FB4C7"></i>Névoa</button>
+      </div>
+      <div class="buy">
+        <div class="price">R$ 189<small>ou 3x de R$ 63 sem juros</small></div>
+        <button class="btn" type="button" data-buy>Comprar o Ponto</button>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <svg viewBox="0 0 400 400" role="img">
+        <ellipse cx="200" cy="352" rx="120" ry="14" fill="currentColor" opacity=".12"/>
+        <path d="M110 250h180l-14 90a18 18 0 0 1-18 16H142a18 18 0 0 1-18-16z" fill="var(--paper)" stroke="var(--ink)" stroke-width="5"/>
+        <path d="M290 270h24a24 24 0 0 1 0 48h-30" fill="none" stroke="var(--ink)" stroke-width="5"/>
+        <path d="M100 120h200l-48 120h-104z" id="cone" fill="var(--prod)" stroke="var(--ink)" stroke-width="5" stroke-linejoin="round"/>
+        <rect x="92" y="108" width="216" height="16" rx="8" fill="var(--prod)" stroke="var(--ink)" stroke-width="5"/>
+        <path d="M200 244v14" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M170 70c-10 14 10 20 0 34M205 60c-10 14 10 20 0 34M240 70c-10 14 10 20 0 34" fill="none" stroke="var(--mute)" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <section>
+    <h2>Pensado para quem não quer abrir mão do café.</h2>
+    <div class="grid3">
+      <div><h3>Dobra para 2 cm</h3><p>Fica plano na mochila, na gaveta do escritório ou na bagagem de mão.</p></div>
+      <div><h3>Aço inox e silicone</h3><p>Filtro de aço lavável, sem papel descartável. Silicone alimentício na estrutura.</p></div>
+      <div><h3>Serve de 1 a 3 xícaras</h3><p>Do café individual ao bule para dividir, com o mesmo coador.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pronto em três passos.</h2>
+    <ol class="steps">
+      <li><div><b>Abra o coador</b><span>Estique o silicone até travar sobre a xícara.</span></div></li>
+      <li><div><b>Coloque o pó e a água</b><span>Use 15 g de café para cada 250 ml de água quente.</span></div></li>
+      <li><div><b>Lave e dobre</b><span>Enxágue em água corrente e guarde. Pode ir à lava-louças.</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Ficha técnica.</h2>
+    <div class="specs"><table>
+      <tr><th>Dobrado</th><td>2 cm de altura</td></tr>
+      <tr><th>Aberto</th><td>10 cm de diâmetro</td></tr>
+      <tr><th>Material</th><td>Aço inox 304 e silicone alimentício</td></tr>
+      <tr><th>Capacidade</th><td>250 a 600 ml por preparo</td></tr>
+      <tr><th>Cores</th><td>Pinho, Açafrão e Névoa</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Perguntas frequentes.</h2>
+    <div style="margin-top:24px">
+      <details><summary>Preciso de filtro de papel?</summary><p>Não. O filtro de aço já vem no coador e pode ser lavado e reutilizado.</p></details>
+      <details><summary>Quanto tempo leva para chegar?</summary><p>Enviamos em até 2 dias úteis. O prazo final aparece no carrinho, de acordo com o CEP.</p></details>
+      <details><summary>Posso trocar se não gostar?</summary><p>Sim. Você tem 30 dias para devolver, sem precisar explicar o motivo.</p></details>
+      <details><summary>Funciona com qualquer xícara?</summary><p>Funciona com xícaras e canecas de boca entre 7 e 10 cm.</p></details>
+    </div>
+  </section>
+
+  <div class="guar">
+    <h2>30 dias para testar sem risco.</h2>
+    <p>Se o Ponto não encaixar na sua rotina, devolvemos o valor integral. Sem formulário longo e sem burocracia.</p>
+    <p style="margin-top:22px"><button class="btn" type="button" data-buy>Comprar o Ponto</button></p>
+  </div>
+  </main>
+
+  <footer>Página de demonstração. Produto e marca fictícios, criados para portfólio.</footer>
+</div>
+
+<div class="bar"><b id="barName">Ponto Pinho · R$ 189</b><button class="btn" type="button" data-buy>Comprar</button></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var root=document.documentElement, name="Pinho";
+  var btns=document.querySelectorAll(".swatches button");
+  var bar=document.getElementById("barName");
+  var toast=document.getElementById("toast"), t;
+  btns.forEach(function(b){
+    b.addEventListener("click",function(){
+      btns.forEach(function(x){x.setAttribute("aria-pressed","false")});
+      b.setAttribute("aria-pressed","true");
+      root.style.setProperty("--prod",b.dataset.c);
+      name=b.dataset.n;
+      bar.textContent="Ponto "+name+" · R$ 189";
+    });
+  });
+  document.querySelectorAll("[data-buy]").forEach(function(b){
+    b.addEventListener("click",function(){
+      toast.textContent="Ponto "+name+" adicionado ao carrinho (demonstração).";
+      toast.classList.add("on");
+      clearTimeout(t);
+      t=setTimeout(function(){toast.classList.remove("on")},2600);
+    });
+  });
+})();
+</script>
+</body>
+</html>
